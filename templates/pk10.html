@@ -1,0 +1,34 @@
+<div class="top-box clear">
+    <div id="indexLgDIV" style="width: 230px;height: 67px;margin-top:00px;float: left;">
+        <img src="https://1.pkcdns4.com/uploadimg/1/bgf/a/bgf_a_1523251281.gif" class="logoObj"
+             style="width: 230px; height: 67px;">
+    </div>
+    <div class="bar-right">
+        {% if request.session.account == None %}
+            <div id="LOGIN-FORM">
+                <form action="{% url 'login' %}" method="post">
+                    <div class="login-area">
+                        <div class="login-cent">
+                                <span class="login-mane">
+                                    <input class="input_tip" type="text" name="account" placeholder="账户名称"
+                                           id="username"></span>
+                            <span class="login-password">
+                                    <input class="input_tip" type="password" maxlength="20" placeholder="密码"
+                                           name="password1" id="password"></span>
+                        </div>
+                        <button type="submit" class="btn btn-default">登录</button>
+                        <a href="{% url 'register' %}">
+                            <button class="btn btn-default">注册</button>
+                        </a>
+                    </div>
+                </form>
+            </div>
+        {% else %}
+            欢迎回来{{ request.session.account }}
+        {% endif %}
+    </div>
+</div>
+
+{{ pk.qishu }}期 - {{ pk.haoma }} - {{ pk.shijian }}开奖
+
+{{ odds.Guan_Yada }}

@@ -12,8 +12,9 @@ def index(request):
     pk = PK10.objects.all().last()
     odds = Odds.objects.all().last()
     sq = pytz.timezone('Asia/Shanghai')
-    time = (datetime.datetime.now(sq)).strftime('%H:%M:%S')
-    context = {'pk': pk, 'odds': odds,'time':time}
+    nowtime = (datetime.datetime.now(sq)).strftime('%H:%M:%S')
+    closetime = (datetime.datetime.now(sq)).strftime('%H:%M:%S')
+    context = {'pk': pk, 'odds': odds,'time':nowtime}
     return render(request, 'pk10.html', context)
 
 

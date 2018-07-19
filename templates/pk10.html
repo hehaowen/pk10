@@ -1,34 +1,5 @@
 {% load static %}
-<div class="top-box clear">
-    <div id="indexLgDIV" style="width: 230px;height: 67px;margin-top:00px;float: left;">
-        <img src="https://1.pkcdns4.com/uploadimg/1/bgf/a/bgf_a_1523251281.gif" class="logoObj"
-             style="width: 230px; height: 67px;">
-    </div>
-    <div class="bar-right">
-        {% if request.session.account == None %}
-            <div id="LOGIN-FORM">
-                <form action="{% url 'login' %}" method="post">
-                    <div class="login-area">
-                        <div class="login-cent">
-                                <span class="login-mane">
-                                    <input class="input_tip" type="text" name="account" placeholder="账户名称"
-                                           id="username"></span>
-                            <span class="login-password">
-                                    <input class="input_tip" type="password" maxlength="20" placeholder="密码"
-                                           name="password1" id="password"></span>
-                        </div>
-                        <button type="submit" class="btn btn-default">登录</button>
-                        <a href="{% url 'register' %}">
-                            <button class="btn btn-default">注册</button>
-                        </a>
-                    </div>
-                </form>
-            </div>
-        {% else %}
-            欢迎回来{{ request.session.account }}
-        {% endif %}
-    </div>
-</div>
+
 <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'css/ui-dialog.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'css/swiper-3.3.1.min.css' %}">
@@ -51,7 +22,169 @@
 <script type="text/javascript" src="{% static 'js/jquery.nivo.slider.pack.js' %}"></script>
 <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
 <script type="text/javascript" src="{% static 'js/md5.js' %}"></script>
- 
+<script type="text/javascript" src="{% static 'js/modalJs.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/push.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/redbag.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/swfobject.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/swiper-3.3.1.jquery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/tab.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/top.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/unslider.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/utils.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/web_socket.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/WG.Home.Fn.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/WG.RegisterUser.js' %}"></script>
+<body>
+<div class="top-box clear">
+    <div class="bar-right">
+        {% if request.session.account == None %}
+            <div id="LOGIN-FORM">
+                <form action="{% url 'login' %}" method="post">
+                    <div class="login-area">
+                        <div class="login-cent">
+                                <span class="login-mane">
+                                    <input class="input_tip" type="text" name="account" placeholder="账户名称"
+                                           id="username"></span>
+                            <span class="login-password">
+                                    <input class="input_tip" type="password" maxlength="20" placeholder="密码"
+                                           name="password1" id="password"></span>
+                        </div>
+                        <button type="submit" class="btn btn-default">登录</button>
+                        <a href="{% url 'register' %}">
+                            <button class="btn btn-default">注册</button>
+                        </a>
+                    </div>
+                </form>
+            </div>
+        {% else %}
+            <div class="bar-right">
+                <div class="login-acc clear">
+                    <div class="preson-info">
+                        <span class="acc-person">
+                            <strong class="account_hidden">您好，</strong>
+                            <span class="value account_name font-bigger">{{ request.session.account }}</span></span>
+                        <span class="acc-balance">
+                            <strong>余额:</strong>
+                            <span id="Balance" onclick="refreshBalance()" class="font-bigger" style="color:#e4393c;">0.00</span>
+                            <span class="ele-obalance-wrap js_ele_obalance_wrap">
+                                <span class="ele-accinfo ele-other-balance">
+                                    <i class="fa fa-plus-square"></i>
+                                </span>
+                                <div class="js_ele_obalance_item_wrap">
+                                <div class="ele-obalance-item">
+                                  <div class="ele-obalance"><span>系统余额：</span><strong>0.00</strong></div>
+                                                                    <div class="ele-obalance"><span>BG余额：</span><strong>0.00</strong></div>
+                                                                    <div class="ele-obalance"><span>CS余额：</span><strong>0.00</strong></div>
+                                                                    <div class="ele-obalance"><span>IM余额：</span><strong>0.00</strong></div>
+                                                                    <div class="ele-obalance"><span>EGTC余额：</span><strong>0.00</strong></div>
+                                                                    <div class="ele-obalance"><span>AG余额：</span><strong>0.00</strong></div>
+                                                                    <div class="ele-obalance"><span>BBIN余额：</span><strong>0.00</strong></div>
+                                                                    <div class="ele-obalance"><span>MG余额：</span><strong>0.00</strong></div>
+                                                                    <div class="ele-obalance"><span>LEBO余额：</span><strong>0.00</strong></div>
+                                                                    <div class="ele-obalance"><span>OG余额：</span><strong>0.00</strong></div>
+                                                                    <div class="ele-obalance"><span>DG余额：</span><strong>0.00</strong></div>
+                                                                    <div class="ele-obalance"><span>AB余额：</span><strong>0.00</strong></div>
+                                                                    <div class="ele-obalance"><span>PT余额：</span><strong>0.00</strong></div>
+                                                                    <div class="ele-obalance"><span>GG余额：</span><strong>0.00</strong></div>
+                                                                    <div class="ele-obalance"><span>HB余额：</span><strong>0.00</strong></div>
+                                                                    <div class="ele-obalance"><span>SB余额：</span><strong>0.00</strong></div>
+                                                                    <div class="ele-obalance"><span>LMG余额：</span><strong>0.00</strong></div>
+                                                                    <div class="ele-obalance"><span>GD余额：</span><strong>0.00</strong></div>
+                                                                    <div class="ele-obalance"><span>GPI余额：</span><strong>0.00</strong></div>
+                                                                    <div class="ele-obalance"><span>SA余额：</span><strong>0.00</strong></div>
+                                                                  </div>
+                                <div class="ele-balance-tool clearfix">
+                                   <a href="javascript:openmember('3');">额度转换</a>
+                                </div>
+                                <style>
+
+                                    /*clear float*/
+                                    .clearfix:before, .clearfix:after { -tent:""; display:table;}
+                                    .clearfix:after { clear:both;}
+                                    .clearfix { *zoom:1;}
+                                    .js_ele_obalance_item_wrap{
+                                        display:none;
+                                        position: absolute;
+                                        opacity: 1;
+                                        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+                                        width: 270px;
+                                        -webkit-box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+                                        -moz-box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+                                        box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+                                        border-radius: 2px;
+                                        color: #000;
+                                        font-size: 12px;
+                                        background: #FFF56B;
+                                        cursor: default;
+                                        z-index: 9999;
+                                        right: 0;
+                                        text-align: left;
+                                    }
+                                    .js_ele_obalance_wrap{position:relative}
+                                    .js_ele_obalance_wrap .ele-obalance{
+                                            line-height: 22px;
+                                            color:#000;
+                                    }
+                                    .js_ele_obalance_wrap .ele-obalance strong{
+                                            color:#000;
+                                    }
+                                    .ele-obalance-item{
+                                        padding: 16px;
+                                    }
+                                    .ele-obalance-item strong{
+                                        font-weight: normal;
+                                    }
+                                    .ele-obalance{
+                                        padding-bottom: 2px;
+                                        color: #444;
+                                    }
+                                    /* 額度轉換 */
+                                    .ele-balance-tool{
+                                        padding: 4px;
+                                        background: #F4F4F4;
+                                    }
+                                    .ele-balance-tool a{
+                                        float: right;
+                                        padding: 4px 8px;
+                                        color: #FFF;
+                                        background: #555;
+                                        -o-transition: background-color .20s linear;
+                                        -webkit-transition: background-color .20s linear;
+                                        -moz-transition: background-color .20s linear;
+                                        transition:  background-color .20s linear;
+                                        border-radius: 2px;
+                                        text-decoration: none;
+                                    }
+                                    .ele-balance-tool a:hover{
+                                        background: #000;
+                                    }
+                                    .js_ele_obalance_wrap:hover .js_ele_obalance_item_wrap{
+                                    display:block;
+                                }
+                                </style>
+                                </div>
+                            </span>
+                        </span>
+                        <span class="info">|
+                            <a title="用户中心" class="btn_user" href="javascript:openmember('4');">
+                                <span>用户中心</span></a>|
+                            <a title="充值" class="btn-navacc-deposit" href="javascript:openmember('1');">
+                                <span>充值</span></a>|
+                            <a title="提现" class="btn-navacc-withdraw" href="javascript:openmember('2');">
+                                <span>提现</span></a>|
+                            <a title="交易记录" class="btn_report" href="javascript:openmember('5');">
+                                <span>交易记录</span></a>|
+                            <a title="个人消息" class="btn_notice" href="javascript:openmember('8');">
+                                <span>个人消息</span></a>|
+                            <a title="退出" class="btn-login-out" href="javascript:void(0)" onclick="javascript:window.location.href='/index.php/webcenter/login/login_out'">
+                                <span>退出</span></a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+</div>
 <div class="play-bd clearfix">
     <div class="main-bd" id="parlay-ctn">
         <div class="clearfix top-bar">
@@ -63,8 +196,6 @@
 
 
             </div>
-
-            <!-- <span> 今天输赢 <b id="win-lose">0.00</b> -->
             <span> 期数 <b class="box" id="current-issue">{{ pk.qishu }}</b>
 						</span> <span> 距离封盘 <b class="box timer" id="close-timer">{{ time }}</b>
 						</span> <span> 距离开奖 <b class="box timer" id="award-timer">{{ time }}</b>
@@ -2241,5 +2372,4 @@
 距离开奖:
   <span class="box timer" id="award-timer">{{ time }}</span>
 {{ pk.qishu }}期 - {{ pk.haoma }} - {{ pk.shijian }}开奖
-
-{{ odds.Guan_Yada }}
+</body>

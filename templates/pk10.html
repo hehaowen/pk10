@@ -1,3 +1,4 @@
+{% load static %}
 <div class="top-box clear">
     <div id="indexLgDIV" style="width: 230px;height: 67px;margin-top:00px;float: left;">
         <img src="https://1.pkcdns4.com/uploadimg/1/bgf/a/bgf_a_1523251281.gif" class="logoObj"
@@ -28,7 +29,2207 @@
         {% endif %}
     </div>
 </div>
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/ui-dialog.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/swiper-3.3.1.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/main_gray.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/modalCss.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome1.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/jquery-ui-1.9.2.custom.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/jquery.rondell.css' %}">
+<script type="text/javascript" src="{% static 'js/jquery-1.11.3.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/lottery.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/index.js' %}"></script>
+ 
+<div class="play-bd clearfix">
+    <div class="main-bd" id="parlay-ctn">
+        <div class="clearfix top-bar">
+            <div class="fr">
 
+            </div>
+
+            <div class="fr removable">
+
+
+            </div>
+
+            <!-- <span> 今天输赢 <b id="win-lose">0.00</b> -->
+            <span> 期数 <b class="box" id="current-issue">{{ pk.qishu }}</b>
+						</span> <span> 距离封盘 <b class="box timer" id="close-timer">{{ time }}</b>
+						</span> <span> 距离开奖 <b class="box timer" id="award-timer">{{ time }}</b>
+						</span>
+        </div>
+        <div class="mt10">
+            <div id="j-n1" class="hide" style="display: block;">
+                <!-- 双面盘start -->
+                <table class="table nested-table mb10">
+                    <thead>
+                    <tr>
+                        <th colspan="4">冠、亚军和</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="p0" style="border-right:none;">
+                            <table class=" j-betting">
+                                <tbody>
+                                <tr data-type="冠、亚军和" data-odds="1.98" data-id="4196">
+                                    <td class="table-odd" style="border-bottom:none;">冠亚大</td>
+                                    <td style="border-bottom:none;"><span class="odds-text">1.980</span></td>
+                                    <td class="j-odds" style="display: none; border-bottom:none;"><input type="text"
+                                                                                                         class="input fb">
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td class="p0" style="border-right:none;">
+                            <table class=" j-betting">
+                                <tbody>
+                                <tr data-type="冠、亚军和" data-odds="1.75" data-id="4197">
+                                    <td class="table-odd" style="border-bottom:none;">冠亚小</td>
+                                    <td style="border-bottom:none;"><span class="odds-text">1.750</span></td>
+                                    <td class="j-odds" style="display: none; border-bottom:none;"><input type="text"
+                                                                                                         class="input fb">
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td class="p0" style="border-right:none;">
+                            <table class=" j-betting">
+                                <tbody>
+                                <tr data-type="冠、亚军和" data-odds="1.75" data-id="4198">
+                                    <td class="table-odd" style="border-bottom:none;">冠亚单</td>
+                                    <td style="border-bottom:none;"><span class="odds-text">1.750</span></td>
+                                    <td class="j-odds" style="display: none; border-bottom:none;"><input type="text"
+                                                                                                         class="input fb">
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td class="p0" style="border-right:none;">
+                            <table class=" j-betting">
+                                <tbody>
+                                <tr data-type="冠、亚军和" data-odds="1.98" data-id="4199">
+                                    <td class="table-odd" style="border-bottom:none;">冠亚双</td>
+                                    <td style="border-bottom:none;"><span class="odds-text">1.980</span></td>
+                                    <td class="j-odds" style="display: none; border-bottom:none;"><input type="text"
+                                                                                                         class="input fb">
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <table class="table nested-table sm-table">
+                    <tbody>
+                    <tr>
+                        <td class="p0">
+                            <table class=" j-betting">
+                                <thead>
+                                <tr>
+                                    <th colspan="3">冠军</th>
+                                </tr>
+
+                                </thead>
+                                <tbody>
+                                <tr data-odds="1.982" data-id="871">
+                                    <td class="table-odd">大</td>
+                                    <td style=" border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none;"><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="872">
+                                    <td class="table-odd">小</td>
+                                    <td style=" border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none;"><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="873">
+                                    <td class="table-odd">单</td>
+                                    <td style=" border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none;"><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="874">
+                                    <td class="table-odd">双</td>
+                                    <td style=" border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none;"><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="875">
+                                    <td class="table-odd">龙</td>
+                                    <td style=" border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none;"><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="876">
+                                    <td class="table-odd">虎</td>
+                                    <td style=" border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none;"><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td class="p0">
+                            <table class=" j-betting">
+                                <thead>
+                                <tr>
+                                    <th colspan="3">亚军</th>
+                                </tr>
+
+                                </thead>
+                                <tbody>
+                                <tr data-odds="1.982" data-id="887">
+                                    <td class="table-odd">大</td>
+                                    <td style=" border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none;"><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="888">
+                                    <td class="table-odd">小</td>
+                                    <td style=" border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none;"><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="889">
+                                    <td class="table-odd">单</td>
+                                    <td style=" border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none;"><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="890">
+                                    <td class="table-odd">双</td>
+                                    <td style=" border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none;"><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="891">
+                                    <td class="table-odd">龙</td>
+                                    <td style=" border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none;"><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="892">
+                                    <td class="table-odd">虎</td>
+                                    <td style=" border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none;"><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td class="p0">
+                            <table class=" j-betting">
+                                <thead>
+                                <tr>
+                                    <th colspan="3">第三名</th>
+                                </tr>
+
+                                </thead>
+                                <tbody>
+                                <tr data-odds="1.982" data-id="903">
+                                    <td class="table-odd">大</td>
+                                    <td style=" border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none;"><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="904">
+                                    <td class="table-odd">小</td>
+                                    <td style=" border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none;"><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="905">
+                                    <td class="table-odd">单</td>
+                                    <td style=" border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none;"><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="906">
+                                    <td class="table-odd">双</td>
+                                    <td style=" border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none;"><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="907">
+                                    <td class="table-odd">龙</td>
+                                    <td style=" border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none;"><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="908">
+                                    <td class="table-odd">虎</td>
+                                    <td style=" border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none;"><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td class="p0">
+                            <table class=" j-betting">
+                                <thead>
+                                <tr>
+                                    <th colspan="3">第四名</th>
+                                </tr>
+
+                                </thead>
+                                <tbody>
+                                <tr data-odds="1.982" data-id="919">
+                                    <td class="table-odd">大</td>
+                                    <td style=" border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none;"><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="920">
+                                    <td class="table-odd">小</td>
+                                    <td style=" border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none;"><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="921">
+                                    <td class="table-odd">单</td>
+                                    <td style=" border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none;"><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="922">
+                                    <td class="table-odd">双</td>
+                                    <td style=" border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none;"><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="923">
+                                    <td class="table-odd">龙</td>
+                                    <td style=" border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none;"><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="924">
+                                    <td class="table-odd">虎</td>
+                                    <td style=" border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none;"><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td class="p0">
+                            <table class=" j-betting">
+                                <thead>
+                                <tr>
+                                    <th colspan="3">第五名</th>
+                                </tr>
+
+                                </thead>
+                                <tbody>
+                                <tr data-odds="1.982" data-id="935">
+                                    <td class="table-odd">大</td>
+                                    <td style=" border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none;"><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="936">
+                                    <td class="table-odd">小</td>
+                                    <td style=" border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none;"><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="937">
+                                    <td class="table-odd">单</td>
+                                    <td style=" border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none;"><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="938">
+                                    <td class="table-odd">双</td>
+                                    <td style=" border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none;"><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="939">
+                                    <td class="table-odd">龙</td>
+                                    <td style=" border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none;"><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="940">
+                                    <td class="table-odd">虎</td>
+                                    <td style=" border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none;"><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="p0">
+                            <table class=" j-betting">
+                                <thead>
+                                <tr>
+                                    <th colspan="3">第六名</th>
+                                </tr>
+
+                                </thead>
+                                <tbody>
+                                <tr data-odds="1.982" data-id="951">
+                                    <td class="table-odd">大</td>
+                                    <td style=" border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none;"><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="952">
+                                    <td class="table-odd">小</td>
+                                    <td style=" border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none;"><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="953">
+                                    <td class="table-odd">单</td>
+                                    <td style=" border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none;"><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="954">
+                                    <td class="table-odd">双</td>
+                                    <td style=" border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none;"><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td class="p0">
+                            <table class=" j-betting">
+                                <thead>
+                                <tr>
+                                    <th colspan="3">第七名</th>
+                                </tr>
+
+                                </thead>
+                                <tbody>
+                                <tr data-odds="1.982" data-id="965">
+                                    <td class="table-odd">大</td>
+                                    <td style=" border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none;"><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="966">
+                                    <td class="table-odd">小</td>
+                                    <td style=" border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none;"><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="967">
+                                    <td class="table-odd">单</td>
+                                    <td style=" border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none;"><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="968">
+                                    <td class="table-odd">双</td>
+                                    <td style=" border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none;"><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td class="p0">
+                            <table class=" j-betting">
+                                <thead>
+                                <tr>
+                                    <th colspan="3">第八名</th>
+                                </tr>
+
+                                </thead>
+                                <tbody>
+                                <tr data-odds="1.982" data-id="979">
+                                    <td class="table-odd">大</td>
+                                    <td style=" border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none;"><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="980">
+                                    <td class="table-odd">小</td>
+                                    <td style=" border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none;"><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="981">
+                                    <td class="table-odd">单</td>
+                                    <td style=" border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none;"><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="982">
+                                    <td class="table-odd">双</td>
+                                    <td style=" border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none;"><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td class="p0">
+                            <table class=" j-betting">
+                                <thead>
+                                <tr>
+                                    <th colspan="3">第九名</th>
+                                </tr>
+
+                                </thead>
+                                <tbody>
+                                <tr data-odds="1.982" data-id="993">
+                                    <td class="table-odd">大</td>
+                                    <td style=" border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none;"><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="994">
+                                    <td class="table-odd">小</td>
+                                    <td style=" border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none;"><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="995">
+                                    <td class="table-odd">单</td>
+                                    <td style=" border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none;"><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="996">
+                                    <td class="table-odd">双</td>
+                                    <td style=" border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none;"><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td class="p0">
+                            <table class=" j-betting">
+                                <thead>
+                                <tr>
+                                    <th colspan="3">第十名</th>
+                                </tr>
+
+                                </thead>
+                                <tbody>
+                                <tr data-odds="1.982" data-id="1007">
+                                    <td class="table-odd">大</td>
+                                    <td style=" border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none;"><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="1008">
+                                    <td class="table-odd">小</td>
+                                    <td style=" border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none;"><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="1009">
+                                    <td class="table-odd">单</td>
+                                    <td style=" border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none;"><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="1010">
+                                    <td class="table-odd">双</td>
+                                    <td style=" border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none;"><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <!-- 双面盘end -->
+
+                <!-- 冠、亚军和 start -->
+                <!-- 冠、亚军和 end -->
+
+                <!-- 1-5|6-10 start -->
+                <!-- 1-5|6-10 end -->
+            </div>
+            <div id="j-n2" class="hide" style="display: none;">
+                <!-- 双面盘start -->
+                <!-- 双面盘end -->
+
+                <!-- 冠、亚军和 start -->
+                <table class="table nested-table mb10">
+                    <thead>
+                    <tr>
+                        <th colspan="4">冠、亚军和</th>
+                    </tr>
+                    </thead>
+                    <style>
+                        .j-betting td {
+                            border-bottom: none;
+                        }
+                    </style>
+                    <tbody>
+                    <tr>
+                        <td class="p0">
+                            <table class="j-betting">
+                                <tbody>
+                                <tr data-odds="41" data-type="冠、亚军和" data-id="4179">
+                                    <td class="table-odd"> 3</td>
+                                    <td style="border-right:none;"><span class="odds-text">41.000</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none; "><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                <tr data-odds="14" data-type="冠、亚军和" data-id="4183">
+                                    <td class="table-odd"> 7</td>
+                                    <td style="border-right:none;"><span class="odds-text">14.000</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none; "><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                <tr data-odds="9" data-type="冠、亚军和" data-id="4187">
+                                    <td class="table-odd"> 11</td>
+                                    <td style="border-right:none;"><span class="odds-text">9.000</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none; "><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                <tr data-odds="14" data-type="冠、亚军和" data-id="4191">
+                                    <td class="table-odd"> 15</td>
+                                    <td style="border-right:none;"><span class="odds-text">14.000</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none; "><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                <tr data-odds="41" data-type="冠、亚军和" data-id="4195">
+                                    <td class="table-odd"> 19</td>
+                                    <td style="border-right:none;"><span class="odds-text">41.000</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none; "><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                <tr data-odds="1.98" data-type="冠、亚军和" data-id="4196">
+                                    <td class="table-odd"> 冠亚大</td>
+                                    <td style="border-right:none;"><span class="odds-text">1.980</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none; "><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td class="p0">
+                            <table class="j-betting">
+                                <tbody>
+                                <tr data-odds="41" data-type="冠、亚军和" data-id="4180">
+                                    <td class="table-odd"> 4</td>
+                                    <td style="border-right:none;"><span class="odds-text">41.000</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none; "><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                <tr data-odds="14" data-type="冠、亚军和" data-id="4184">
+                                    <td class="table-odd"> 8</td>
+                                    <td style="border-right:none;"><span class="odds-text">14.000</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none; "><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                <tr data-odds="11.24" data-type="冠、亚军和" data-id="4188">
+                                    <td class="table-odd"> 12</td>
+                                    <td style="border-right:none;"><span class="odds-text">11.240</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none; "><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                <tr data-odds="21" data-type="冠、亚军和" data-id="4192">
+                                    <td class="table-odd"> 16</td>
+                                    <td style="border-right:none;"><span class="odds-text">21.000</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none; "><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table-odd" style="height:22px;"></td>
+                                    <td style="border-right:none;"></td>
+                                    <td class="j-odds bo-left" style="display: none;  border-right:none;"></td>
+                                </tr>
+                                <tr data-odds="1.75" data-type="冠、亚军和" data-id="4197">
+                                    <td class="table-odd"> 冠亚小</td>
+                                    <td style="border-right:none;"><span class="odds-text">1.750</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none; "><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td class="p0">
+                            <table class="j-betting">
+                                <tbody>
+                                <tr data-odds="21" data-type="冠、亚军和" data-id="4181">
+                                    <td class="table-odd"> 5</td>
+                                    <td style="border-right:none;"><span class="odds-text">21.000</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none; "><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                <tr data-odds="11.24" data-type="冠、亚军和" data-id="4185">
+                                    <td class="table-odd"> 9</td>
+                                    <td style="border-right:none;"><span class="odds-text">11.240</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none; "><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                <tr data-odds="11.24" data-type="冠、亚军和" data-id="4189">
+                                    <td class="table-odd"> 13</td>
+                                    <td style="border-right:none;"><span class="odds-text">11.240</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none; "><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                <tr data-odds="21" data-type="冠、亚军和" data-id="4193">
+                                    <td class="table-odd"> 17</td>
+                                    <td style="border-right:none;"><span class="odds-text">21.000</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none; "><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table-odd" style="height:22px;"></td>
+                                    <td style="border-right:none;"></td>
+                                    <td class="j-odds bo-left" style="display: none;  border-right:none;"></td>
+                                </tr>
+                                <tr data-odds="1.75" data-type="冠、亚军和" data-id="4198">
+                                    <td class="table-odd"> 冠亚单</td>
+                                    <td style="border-right:none;"><span class="odds-text">1.750</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none; "><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td class="p0">
+                            <table class="j-betting">
+                                <tbody>
+                                <tr data-odds="21" data-type="冠、亚军和" data-id="4182">
+                                    <td class="table-odd"> 6</td>
+                                    <td style="border-right:none;"><span class="odds-text">21.000</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none; "><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                <tr data-odds="11.24" data-type="冠、亚军和" data-id="4186">
+                                    <td class="table-odd"> 10</td>
+                                    <td style="border-right:none;"><span class="odds-text">11.240</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none; "><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                <tr data-odds="14" data-type="冠、亚军和" data-id="4190">
+                                    <td class="table-odd"> 14</td>
+                                    <td style="border-right:none;"><span class="odds-text">14.000</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none; "><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                <tr data-odds="41" data-type="冠、亚军和" data-id="4194">
+                                    <td class="table-odd"> 18</td>
+                                    <td style="border-right:none;"><span class="odds-text">41.000</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none; "><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table-odd" style="height:22px;"></td>
+                                    <td style="border-right:none;"></td>
+                                    <td class="j-odds bo-left" style="display: none;  border-right:none;"></td>
+                                </tr>
+                                <tr data-odds="1.98" data-type="冠、亚军和" data-id="4199">
+                                    <td class="table-odd"> 冠亚双</td>
+                                    <td style="border-right:none;"><span class="odds-text">1.980</span></td>
+                                    <td class="j-odds bo-left" style="display: none; border-right:none; "><input
+                                            type="text"
+                                            class="input fb">
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+
+                    </tbody>
+                </table>
+                <!-- 冠、亚军和 end -->
+
+                <!-- 1-5|6-10 start -->
+                <!-- 1-5|6-10 end -->
+            </div>
+            <div id="j-n3" class="hide" style="display: none;">
+                <!-- 双面盘start -->
+                <!-- 双面盘end -->
+
+                <!-- 冠、亚军和 start -->
+                <!-- 冠、亚军和 end -->
+
+                <!-- 1-5|6-10 start -->
+                <table class="table nested-table sm-table hide-icon-text">
+                    <tbody>
+                    <tr>
+                        <td class="p0">
+                            <table class=" j-betting">
+                                <thead>
+                                <tr>
+                                    <th colspan="3">冠军</th>
+                                </tr>
+
+                                </thead>
+                                <tbody>
+                                <tr data-odds="9.85" data-id="861">
+                                    <td class="table-odd">
+                                        <i class="icon bj1">1</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="862">
+                                    <td class="table-odd">
+                                        <i class="icon bj2">2</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="863">
+                                    <td class="table-odd">
+                                        <i class="icon bj3">3</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="864">
+                                    <td class="table-odd">
+                                        <i class="icon bj4">4</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="865">
+                                    <td class="table-odd">
+                                        <i class="icon bj5">5</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="866">
+                                    <td class="table-odd">
+                                        <i class="icon bj6">6</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="867">
+                                    <td class="table-odd">
+                                        <i class="icon bj7">7</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="868">
+                                    <td class="table-odd">
+                                        <i class="icon bj8">8</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="869">
+                                    <td class="table-odd">
+                                        <i class="icon bj9">9</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="870">
+                                    <td class="table-odd">
+                                        <i class="icon bj10">10</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="871">
+                                    <td class="table-odd">
+                                        大
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="872">
+                                    <td class="table-odd">
+                                        小
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="873">
+                                    <td class="table-odd">
+                                        单
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="874">
+                                    <td class="table-odd">
+                                        双
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td class="p0">
+                            <table class=" j-betting">
+                                <thead>
+                                <tr>
+                                    <th colspan="3">亚军</th>
+                                </tr>
+
+                                </thead>
+                                <tbody>
+                                <tr data-odds="9.85" data-id="877">
+                                    <td class="table-odd">
+                                        <i class="icon bj1">1</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="878">
+                                    <td class="table-odd">
+                                        <i class="icon bj2">2</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="879">
+                                    <td class="table-odd">
+                                        <i class="icon bj3">3</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="880">
+                                    <td class="table-odd">
+                                        <i class="icon bj4">4</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="881">
+                                    <td class="table-odd">
+                                        <i class="icon bj5">5</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="882">
+                                    <td class="table-odd">
+                                        <i class="icon bj6">6</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="883">
+                                    <td class="table-odd">
+                                        <i class="icon bj7">7</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="884">
+                                    <td class="table-odd">
+                                        <i class="icon bj8">8</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="885">
+                                    <td class="table-odd">
+                                        <i class="icon bj9">9</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="886">
+                                    <td class="table-odd">
+                                        <i class="icon bj10">10</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="887">
+                                    <td class="table-odd">
+                                        大
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="888">
+                                    <td class="table-odd">
+                                        小
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="889">
+                                    <td class="table-odd">
+                                        单
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="890">
+                                    <td class="table-odd">
+                                        双
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td class="p0">
+                            <table class=" j-betting">
+                                <thead>
+                                <tr>
+                                    <th colspan="3">第三名</th>
+                                </tr>
+
+                                </thead>
+                                <tbody>
+                                <tr data-odds="9.85" data-id="893">
+                                    <td class="table-odd">
+                                        <i class="icon bj1">1</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="894">
+                                    <td class="table-odd">
+                                        <i class="icon bj2">2</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="895">
+                                    <td class="table-odd">
+                                        <i class="icon bj3">3</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="896">
+                                    <td class="table-odd">
+                                        <i class="icon bj4">4</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="897">
+                                    <td class="table-odd">
+                                        <i class="icon bj5">5</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="898">
+                                    <td class="table-odd">
+                                        <i class="icon bj6">6</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="899">
+                                    <td class="table-odd">
+                                        <i class="icon bj7">7</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="900">
+                                    <td class="table-odd">
+                                        <i class="icon bj8">8</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="901">
+                                    <td class="table-odd">
+                                        <i class="icon bj9">9</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="902">
+                                    <td class="table-odd">
+                                        <i class="icon bj10">10</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="903">
+                                    <td class="table-odd">
+                                        大
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="904">
+                                    <td class="table-odd">
+                                        小
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="905">
+                                    <td class="table-odd">
+                                        单
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="906">
+                                    <td class="table-odd">
+                                        双
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td class="p0">
+                            <table class=" j-betting">
+                                <thead>
+                                <tr>
+                                    <th colspan="3">第四名</th>
+                                </tr>
+
+                                </thead>
+                                <tbody>
+                                <tr data-odds="9.85" data-id="909">
+                                    <td class="table-odd">
+                                        <i class="icon bj1">1</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="910">
+                                    <td class="table-odd">
+                                        <i class="icon bj2">2</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="911">
+                                    <td class="table-odd">
+                                        <i class="icon bj3">3</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="912">
+                                    <td class="table-odd">
+                                        <i class="icon bj4">4</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="913">
+                                    <td class="table-odd">
+                                        <i class="icon bj5">5</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="914">
+                                    <td class="table-odd">
+                                        <i class="icon bj6">6</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="915">
+                                    <td class="table-odd">
+                                        <i class="icon bj7">7</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="916">
+                                    <td class="table-odd">
+                                        <i class="icon bj8">8</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="917">
+                                    <td class="table-odd">
+                                        <i class="icon bj9">9</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="918">
+                                    <td class="table-odd">
+                                        <i class="icon bj10">10</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="919">
+                                    <td class="table-odd">
+                                        大
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="920">
+                                    <td class="table-odd">
+                                        小
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="921">
+                                    <td class="table-odd">
+                                        单
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="922">
+                                    <td class="table-odd">
+                                        双
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td class="p0">
+                            <table class=" j-betting">
+                                <thead>
+                                <tr>
+                                    <th colspan="3">第五名</th>
+                                </tr>
+
+                                </thead>
+                                <tbody>
+                                <tr data-odds="9.85" data-id="925">
+                                    <td class="table-odd">
+                                        <i class="icon bj1">1</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="926">
+                                    <td class="table-odd">
+                                        <i class="icon bj2">2</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="927">
+                                    <td class="table-odd">
+                                        <i class="icon bj3">3</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="928">
+                                    <td class="table-odd">
+                                        <i class="icon bj4">4</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="929">
+                                    <td class="table-odd">
+                                        <i class="icon bj5">5</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="930">
+                                    <td class="table-odd">
+                                        <i class="icon bj6">6</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="931">
+                                    <td class="table-odd">
+                                        <i class="icon bj7">7</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="932">
+                                    <td class="table-odd">
+                                        <i class="icon bj8">8</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="933">
+                                    <td class="table-odd">
+                                        <i class="icon bj9">9</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="934">
+                                    <td class="table-odd">
+                                        <i class="icon bj10">10</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="935">
+                                    <td class="table-odd">
+                                        大
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="936">
+                                    <td class="table-odd">
+                                        小
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="937">
+                                    <td class="table-odd">
+                                        单
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="938">
+                                    <td class="table-odd">
+                                        双
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <!-- 1-5|6-10 end -->
+            </div>
+            <div id="j-n4" class="hide" style="display: none;">
+                <!-- 双面盘start -->
+                <!-- 双面盘end -->
+
+                <!-- 冠、亚军和 start -->
+                <!-- 冠、亚军和 end -->
+
+                <!-- 1-5|6-10 start -->
+                <table class="table nested-table sm-table hide-icon-text">
+                    <tbody>
+                    <tr>
+                        <td class="p0">
+                            <table class=" j-betting">
+                                <thead>
+                                <tr>
+                                    <th colspan="3">第六名</th>
+                                </tr>
+
+                                </thead>
+                                <tbody>
+                                <tr data-odds="9.85" data-id="941">
+                                    <td class="table-odd">
+                                        <i class="icon bj1">1</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="942">
+                                    <td class="table-odd">
+                                        <i class="icon bj2">2</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="943">
+                                    <td class="table-odd">
+                                        <i class="icon bj3">3</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="944">
+                                    <td class="table-odd">
+                                        <i class="icon bj4">4</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="945">
+                                    <td class="table-odd">
+                                        <i class="icon bj5">5</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="946">
+                                    <td class="table-odd">
+                                        <i class="icon bj6">6</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="947">
+                                    <td class="table-odd">
+                                        <i class="icon bj7">7</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="948">
+                                    <td class="table-odd">
+                                        <i class="icon bj8">8</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="949">
+                                    <td class="table-odd">
+                                        <i class="icon bj9">9</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="950">
+                                    <td class="table-odd">
+                                        <i class="icon bj10">10</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="951">
+                                    <td class="table-odd">
+                                        大
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="952">
+                                    <td class="table-odd">
+                                        小
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="953">
+                                    <td class="table-odd">
+                                        单
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="954">
+                                    <td class="table-odd">
+                                        双
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td class="p0">
+                            <table class=" j-betting">
+                                <thead>
+                                <tr>
+                                    <th colspan="3">第七名</th>
+                                </tr>
+
+                                </thead>
+                                <tbody>
+                                <tr data-odds="9.85" data-id="955">
+                                    <td class="table-odd">
+                                        <i class="icon bj1">1</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="956">
+                                    <td class="table-odd">
+                                        <i class="icon bj2">2</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="957">
+                                    <td class="table-odd">
+                                        <i class="icon bj3">3</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="958">
+                                    <td class="table-odd">
+                                        <i class="icon bj4">4</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="959">
+                                    <td class="table-odd">
+                                        <i class="icon bj5">5</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="960">
+                                    <td class="table-odd">
+                                        <i class="icon bj6">6</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="961">
+                                    <td class="table-odd">
+                                        <i class="icon bj7">7</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="962">
+                                    <td class="table-odd">
+                                        <i class="icon bj8">8</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="963">
+                                    <td class="table-odd">
+                                        <i class="icon bj9">9</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="964">
+                                    <td class="table-odd">
+                                        <i class="icon bj10">10</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="965">
+                                    <td class="table-odd">
+                                        大
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="966">
+                                    <td class="table-odd">
+                                        小
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="967">
+                                    <td class="table-odd">
+                                        单
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="968">
+                                    <td class="table-odd">
+                                        双
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td class="p0">
+                            <table class=" j-betting">
+                                <thead>
+                                <tr>
+                                    <th colspan="3">第八名</th>
+                                </tr>
+
+                                </thead>
+                                <tbody>
+                                <tr data-odds="9.85" data-id="969">
+                                    <td class="table-odd">
+                                        <i class="icon bj1">1</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="970">
+                                    <td class="table-odd">
+                                        <i class="icon bj2">2</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="971">
+                                    <td class="table-odd">
+                                        <i class="icon bj3">3</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="972">
+                                    <td class="table-odd">
+                                        <i class="icon bj4">4</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="973">
+                                    <td class="table-odd">
+                                        <i class="icon bj5">5</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="974">
+                                    <td class="table-odd">
+                                        <i class="icon bj6">6</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="975">
+                                    <td class="table-odd">
+                                        <i class="icon bj7">7</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="976">
+                                    <td class="table-odd">
+                                        <i class="icon bj8">8</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="977">
+                                    <td class="table-odd">
+                                        <i class="icon bj9">9</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="978">
+                                    <td class="table-odd">
+                                        <i class="icon bj10">10</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="979">
+                                    <td class="table-odd">
+                                        大
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="980">
+                                    <td class="table-odd">
+                                        小
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="981">
+                                    <td class="table-odd">
+                                        单
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="982">
+                                    <td class="table-odd">
+                                        双
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td class="p0">
+                            <table class=" j-betting">
+                                <thead>
+                                <tr>
+                                    <th colspan="3">第九名</th>
+                                </tr>
+
+                                </thead>
+                                <tbody>
+                                <tr data-odds="9.85" data-id="983">
+                                    <td class="table-odd">
+                                        <i class="icon bj1">1</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="984">
+                                    <td class="table-odd">
+                                        <i class="icon bj2">2</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="985">
+                                    <td class="table-odd">
+                                        <i class="icon bj3">3</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="986">
+                                    <td class="table-odd">
+                                        <i class="icon bj4">4</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="987">
+                                    <td class="table-odd">
+                                        <i class="icon bj5">5</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="988">
+                                    <td class="table-odd">
+                                        <i class="icon bj6">6</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="989">
+                                    <td class="table-odd">
+                                        <i class="icon bj7">7</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="990">
+                                    <td class="table-odd">
+                                        <i class="icon bj8">8</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="991">
+                                    <td class="table-odd">
+                                        <i class="icon bj9">9</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="992">
+                                    <td class="table-odd">
+                                        <i class="icon bj10">10</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="993">
+                                    <td class="table-odd">
+                                        大
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="994">
+                                    <td class="table-odd">
+                                        小
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="995">
+                                    <td class="table-odd">
+                                        单
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="996">
+                                    <td class="table-odd">
+                                        双
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td class="p0">
+                            <table class=" j-betting">
+                                <thead>
+                                <tr>
+                                    <th colspan="3">第十名</th>
+                                </tr>
+
+                                </thead>
+                                <tbody>
+                                <tr data-odds="9.85" data-id="997">
+                                    <td class="table-odd">
+                                        <i class="icon bj1">1</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="998">
+                                    <td class="table-odd">
+                                        <i class="icon bj2">2</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="999">
+                                    <td class="table-odd">
+                                        <i class="icon bj3">3</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="1000">
+                                    <td class="table-odd">
+                                        <i class="icon bj4">4</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="1001">
+                                    <td class="table-odd">
+                                        <i class="icon bj5">5</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="1002">
+                                    <td class="table-odd">
+                                        <i class="icon bj6">6</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="1003">
+                                    <td class="table-odd">
+                                        <i class="icon bj7">7</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="1004">
+                                    <td class="table-odd">
+                                        <i class="icon bj8">8</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="1005">
+                                    <td class="table-odd">
+                                        <i class="icon bj9">9</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="9.85" data-id="1006">
+                                    <td class="table-odd">
+                                        <i class="icon bj10">10</i>
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">9.850</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="1007">
+                                    <td class="table-odd">
+                                        大
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="1008">
+                                    <td class="table-odd">
+                                        小
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="1009">
+                                    <td class="table-odd">
+                                        单
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                <tr data-odds="1.982" data-id="1010">
+                                    <td class="table-odd">
+                                        双
+                                    </td>
+                                    <td style="border-right:none;"><span class="odds-text">1.982</span></td>
+                                    <td class="j-odds bo-left" style="border-right:none;"><input type="text"
+                                                                                                 class="input fb"></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <!-- 1-5|6-10 end -->
+            </div>
+            <div id="j-lm" class="hide lian-ma" style="display: none;">
+                <div id="j-lm-tpl" class="hide">
+                    <h4>{{ title }}@{{ lines }}</h4>
+                    <ul>
+                        <li>下注号码</li>
+                        <li>您共选择了个号码</li>
+                        <li>复式共分为组</li>
+                        <li><label>金额：<input type="text" class="input fb single-bet"></label></li>
+                        <li>合计金额： <em class="lm-total"></em>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--.selected-ball START-->
+        <div class="selected-ball clearfix need-auth">
+            <div class="fr">
+                <div class="fr quick-form">
+                    <img style="position:relative; top:2px;" alt=" " src="/public/timages/je_1.png">
+                    <a href="javascript:;" onclick="alert('请先登录！');"><img src="/public/timages/je_2.png"></a>
+                    <img alt=" " src="/public/timages/je_3.png">
+                </div>
+            </div>
+            <b id="j-selected-count"> 已选中 <span class="j-selected-count">0</span>
+
+                注
+            </b>
+            <div class="fr normal-form" style="display: none;">
+                <a href="javascript:;" onclick="alert('请先登录！');"><img src="/public/timages/je_2.png"></a>
+                <img alt=" " src="/public/timages/je_3.png">
+            </div>
+        </div>
+
+
+        <div id="luzhu" class="play-tab tab mt10 hide" data-widget="tab" style="display: none;">
+        </div>
+        <script id="tpl-luzhu" type="text/html">
+            <table class="table secondary-table">
+                <thead>
+
+                <tr>
+                    <td colspan="30" class="tab-hd">
+                        <a href="javascript:;;" class="tab-item"></a>
+                    </td>
+                </tr>
+
+                </thead>
+                <tbody>
+                <tr class="tab-bd">
+                    <td>
+                        <br/>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </script>
+    </div>
+</div>
+ 距离封盘：
+  <span class="box timer" id="close-timer">{{ time }}</span>
+距离开奖:
+  <span class="box timer" id="award-timer">{{ time }}</span>
 {{ pk.qishu }}期 - {{ pk.haoma }} - {{ pk.shijian }}开奖
 
 {{ odds.Guan_Yada }}

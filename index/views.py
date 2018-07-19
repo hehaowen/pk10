@@ -1,3 +1,7 @@
+import datetime
+import os
+
+import pytz
 from django.shortcuts import render, redirect, HttpResponse
 
 # Create your views here.
@@ -7,7 +11,9 @@ from index.models import *
 def index(request):
     pk = PK10.objects.all().last()
     odds = Odds.objects.all().last()
-    context = {'pk': pk, 'odds': odds}
+    sq = pytz.timezone('Asia/Shanghai')
+    time = (datetime.datetime.now(sq)).strftime('%H:%M:%S')
+    context = {'pk': pk, 'odds': odds,'time':time}
     return render(request, 'pk10.html', context)
 
 

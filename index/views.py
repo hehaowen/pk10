@@ -1,5 +1,6 @@
 import datetime
 import os
+import time
 
 import pytz
 from django.shortcuts import render, redirect, HttpResponse
@@ -12,9 +13,12 @@ def index(request):
     pk = PK10.objects.all().last()
     odds = Odds.objects.all().last()
     sq = pytz.timezone('Asia/Shanghai')
+    times = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     nowtime = (datetime.datetime.now(sq)).strftime('%H:%M:%S')
     closetime = (datetime.datetime.now(sq)).strftime('%H:%M:%S')
-    context = {'pk': pk, 'odds': odds,'time':nowtime}
+    timess = time.time()
+    print(timess)
+    context = {'times': times, 'pk': pk, 'odds': odds, 'time': nowtime,'timess':timess}
     return render(request, 'pk10.html', context)
 
 
@@ -41,8 +45,17 @@ def login(request):
         password = post.get('password1')
         if password == user.password:
             request.session['account'] = account
-            return HttpResponse('登录成功')
+            return redirect('/')
         else:
-            return render(request, 'login.html')
+            return redirect('/')
     else:
         return render(request, 'login.html')
+
+
+def logout(request):
+    request.session['account'] = None
+    return redirect('/')
+
+
+def help(request):
+    return render(request, 'help.html')

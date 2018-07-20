@@ -31,12 +31,6 @@ class Odds(models.Model):
     ya_shuang = models.FloatField(verbose_name='亚双',default='1.982')
     ya_long = models.FloatField(verbose_name='亚龙',default='1.982')
     ya_hu = models.FloatField(verbose_name='亚虎',default='1.982')
-    ji_da = models.FloatField(verbose_name='季大',default='1.982')
-    ji_xiao = models.FloatField(verbose_name='季小',default='1.982')
-    ji_dan = models.FloatField(verbose_name='季单',default='1.982')
-    ji_shuang = models.FloatField(verbose_name='季双',default='1.982')
-    ji_long = models.FloatField(verbose_name='季龙',default='1.982')
-    ji_hu = models.FloatField(verbose_name='季虎',default='1.982')
     san_da = models.FloatField(verbose_name='三大',default='1.982')
     san_xiao = models.FloatField(verbose_name='三小',default='1.982')
     san_dan = models.FloatField(verbose_name='三单',default='1.982')
@@ -75,9 +69,6 @@ class Odds(models.Model):
     shi_xiao = models.FloatField(verbose_name='十小',default='1.982')
     shi_dan = models.FloatField(verbose_name='十单',default='1.982')
     shi_shuang = models.FloatField(verbose_name='十双',default='1.982')
-
-    def __str__(self):
-        return self.Guan_Yada
 
 
 class User(models.Model):

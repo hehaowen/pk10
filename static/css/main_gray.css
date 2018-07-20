@@ -211,7 +211,6 @@ hr {
     border-bottom: 1px solid #cfcfcf;
     margin-bottom: 10px;
     *color: pink;
-    *filter: chroma(color=pink);
     height: 10px;
     *margin: -7px 0 2px;
 }
@@ -2116,7 +2115,6 @@ a {
 .icon {
     background-repeat: no-repeat;
     overflow: hidden;
-    background-image: url("../timages/icon.png");
     display: inline-block;
     *display: inline;
     *zoom: 1;
@@ -2128,7 +2126,6 @@ a {
 .icon_2 {
     background-repeat: no-repeat;
     overflow: hidden;
-    background-image: url("../timages/balls_bg.png");
     display: inline-block;
     *display: inline;
     *zoom: 1;
@@ -2141,7 +2138,6 @@ a {
     position: relative;
     background-repeat: no-repeat;
     overflow: hidden;
-    background-image: url("../timages/icon1.png");
     display: inline-block;
     *display: inline;
     *zoom: 1;
